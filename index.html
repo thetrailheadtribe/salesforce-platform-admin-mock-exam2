@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Salesforce Exam Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="exam-container">
+    <!-- Header -->
+    <header class="exam-header">
+      <div class="logo-title">
+        <img src="Logo.png" alt="Trailhead Tribe Logo" class="brand-logo" />
+        <h1>Salesforce Certification Mock Exam</h1>
+      </div>
+      <div id="timer" class="timer">Time Left: 60:00</div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div id="progress" class="progress-fill"></div>
+    </div>
+
+    <!-- Question Card -->
+    <div class="card" id="question-card">
+      <div class="card-header">
+        <span id="question-counter">Question 1 of 1</span>
+      </div>
+      <h2 id="question">Loading question...</h2>
+      <div id="options"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <!--<button onclick="pauseTimer()">Pause Timer</button>
+      <button onclick="resumeTimer()">Resume Timer</button> -->
+      <button class="submit-btn" onclick="submitExam()">Submit Exam</button>
+    </div>
+
+    <!-- Footer (optional notes) -->
+    <footer class="exam-footer">
+      <small>Practice environment. Answers are reviewed after submission.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

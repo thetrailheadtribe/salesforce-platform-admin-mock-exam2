@@ -1,0 +1,180 @@
+/* General Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/*Logo Format*/
+.brand-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+}
+.exam-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+/* Header */
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0176d3; /* Salesforce blue */
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.exam-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Timer styles */
+.timer {
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.timer.red {
+  color: #ff4d4d;
+}
+.timer.bounce {
+  animation: bounce 1s infinite;
+  font-size: 1.6em;
+}
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background: #e0e0e0;
+  height: 12px;
+  border-radius: 6px;
+  margin: 14px 0 18px 0;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #0176d3;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* Question Card */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  color: #5e5e5e;
+  font-size: 14px;
+}
+.card h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+.card label {
+  display: block;
+  margin: 8px 0;
+}
+
+/* Inputs */
+.card input[type="radio"],
+.card input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Navigation & Controls */
+.navigation, .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 10px;
+}
+button {
+  background: #0176d3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  background: #025aa5;
+}
+button:disabled {
+  background: #b0c7dc;
+  cursor: not-allowed;
+}
+.submit-btn {
+  background: #2e844a; /* Salesforce green */
+}
+.submit-btn:hover {
+  background: #256c3c;
+}
+
+/* Footer */
+.exam-footer {
+  margin-top: 18px;
+  text-align: right;
+  color: #6f6f6f;
+}
+
+/* Review Page */
+.review-score {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+.review-item {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+.review-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+.option-line {
+  margin: 4px 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.correct {
+  color: #1f7a1f;
+  font-weight: bold;
+  background: #eaf6ea;
+}
+.wrong {
+  color: #b30000;
+  text-decoration: line-through;
+  background: #fdeaea;
+}
+.user-selected {
+  border: 1px dashed #0176d3;
+}
